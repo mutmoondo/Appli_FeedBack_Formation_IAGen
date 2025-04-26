@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ATTENTION: Règles par défaut très ouvertes (permet lecture/écriture à tous).
+    // TODO: Sécurisez ces règles avant la production !
+    match /{document=**} {
+      allow read, write: if true; // À CHANGER !
+    }
+  }
+}

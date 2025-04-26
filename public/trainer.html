@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Formateur</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3498db"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Dashboard Session <span id="sessionId"></span></h1>
+    <div id="chart-container" style="width: 80%; max-width: 400px; margin: auto;">
+        <canvas id="feedbackChart"></canvas>
+    </div>
+    <div id="counters">
+        <p>Votes Verts: <span id="count-green">0</span></p>
+        <p>Votes Oranges: <span id="count-orange">0</span></p>
+        <p>Votes Rouges: <span id="count-red">0</span></p>
+        <hr>
+        <p>Total Votants: <span id="count-voters">0</span></p>
+        </div>
+
+    <script src="/__/firebase/9.x.x/firebase-app-compat.js"></script> <script src="/__/firebase/9.x.x/firebase-firestore-compat.js"></script>
+    <script src="/__/firebase/init.js"></script> <script src="js/trainer.js"></script>
+</body>
+</html>
