@@ -1,5 +1,5 @@
 console.log("Trainer JS Loaded");
-
+firebase.initializeApp(window.firebaseConfig);
 // Récupérer l'ID de session depuis l'URL
 const params = new URLSearchParams(window.location.search);
 const sessionId = params.get('session');

@@ -6,3 +6,4 @@ body { font-family: sans-serif; padding: 1em; }
 .feedback-button.red { background-color: #e74c3c; }
 #counters { margin-top: 1em; text-align: center; }
 #counters span { font-weight: bold; }
+.feedback-button.voted { box-shadow: 0 0 10px 5px #fff; opacity: 0.7; transform: scale(1.05); transition: all 0.3s ease; }

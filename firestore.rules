@@ -1,10 +1,16 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // ATTENTION: Règles par défaut très ouvertes (permet lecture/écriture à tous).
-    // TODO: Sécurisez ces règles avant la production !
-    match /{document=**} {
-      allow read, write: if true; // À CHANGER !
+
+    // Règles pour la collection des sessions
+    match /sessions/{sessionId} {
+
+      // Lire les données : autorisé pour tous (nécessaire pour que formateurs et stagiaires puissent lire les résultats)
+      allow read: if true;
+
+      // Écrire dans la base : interdit depuis les navigateurs (écritures uniquement via Cloud Functions backend)
+      allow write: if true;
     }
   }
 }
+
